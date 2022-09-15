@@ -21,3 +21,14 @@ int search_with_barrier(int* values, int target, int len)
 
 	return -1;
 }
+
+int search_with_barrier2(int* values, int target, int len)
+{
+	values[len - 1] = target;
+	int i = 0;
+	while (values[i] != target)
+	{
+		i++;
+	}
+	return i < len ? i : -1;
+}
